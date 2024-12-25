@@ -33,6 +33,5 @@ grpcurl -plaintext -d '{"email": "new@example.com", "username": "newuser"}' loca
 
 Task service
 ```
-grpcurl -plaintext -d '{"name": "My New Task", "description": "This is a task description"}' localhost:50051 task.v1.TaskService/TaskCreate
-grpcurl -plaintext -d '{"task_id": "123"}' localhost:50051 task.v1.TaskService/TaskInfo
+grpcurl -plaintext -d '{"name": "My New Task", "description": "This is a task grpcurl -plaintext -d '{"task_id": "123e4567-e89b-12d3-a456-426614174000"}' localhost:50051 task.v1.TaskService/TaskInfo
 ```
