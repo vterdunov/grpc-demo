@@ -1,5 +1,6 @@
 [tools]
 buf = "1.48.0"
+grpcurl = "1.9.2"
 
 [tasks.proto-compile]
 description = "Generate code from .proto files."
