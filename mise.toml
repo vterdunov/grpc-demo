@@ -1,0 +1,6 @@
+[tools]
+buf = "1.48.0"
+
+[tasks.proto-compile]
+description = "Generate code from .proto files."
+run = "buf generate"

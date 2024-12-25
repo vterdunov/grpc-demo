@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package user.v1;
+
+option go_package = "user/v1";
+
+service UserService {
+  rpc UserInfo(UserInfoRequest) returns (UserInfoResponse);
+  rpc UserCreate(UserCreateRequest) returns (UserCreateResponse);
+}
+
+message UserInfoRequest {
+  string user_id = 1;
+}
+
+message UserInfoResponse {
+  string user_id = 1;
+  string email = 2;
+  string username = 3;
+  string status = 4;
+}
+
+message UserCreateRequest {
+  string email = 1;
+  string username = 2;
+}
+
+message UserCreateResponse {
+  string user_id = 1;
+}

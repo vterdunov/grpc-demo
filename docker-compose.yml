@@ -1,0 +1,13 @@
+services:
+  task-service:
+    build:
+      context: ./
+      dockerfile: task-service/Dockerfile
+    ports:
+    - "50051:50051"
+  user-service:
+    build:
+      context: ./
+      dockerfile: user-service/Dockerfile
+    ports:
+    - "50052:50052"

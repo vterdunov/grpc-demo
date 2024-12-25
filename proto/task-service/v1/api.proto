@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package task.v1;
+
+option go_package = "task/v1";
+
+// TaskService ...
+service TaskService {
+  rpc TaskInfo(TaskInfoRequest) returns (TaskInfoResponse);
+  rpc TaskCreate(TaskCreateRequest) returns (TaskCreateResponse);
+
+}
+
+message TaskInfoRequest {
+  string task_id = 1;
+}
+
+message TaskInfoResponse {
+  string task_id = 1;
+  string name = 2;
+  string description = 3;
+  string status = 4;
+}
+
+message TaskCreateRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message TaskCreateResponse {
+  string task_id = 1;
+}
